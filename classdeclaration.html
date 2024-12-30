@@ -1,0 +1,404 @@
+<html></html>
+    <head>
+        <!-- Basic -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Site Metas -->
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <style>
+            p {
+                text-indent: 30px; /* Thụt vào 30px */
+            }
+        </style>
+      
+        <title>Khai báo lớp trong JavaScript - Nam</title>
+      
+        <!-- slider stylesheet -->
+        <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+      
+        <!-- font wesome stylesheet -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+      
+        <!-- bootstrap core css -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+      
+        <!-- fonts style -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="css/style.css" rel="stylesheet" />
+        <!-- responsive style -->
+        <link href="css/responsive.css" rel="stylesheet" />
+        <link href="css/blog-post.css" rel="stylesheet" />
+    </head>
+      <body>
+        <div class="hero_area1">
+          <!-- header section strats -->
+          <header class="header_section">
+              <div class="container">
+                <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+                  <!-- <a class="navbar-brand mr-5" href="index.html">
+                    <img src="images/logo.png" alt="">
+                    <span>
+                      Fregg
+                    </span>
+                  </a> -->
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                      <ul class="navbar-nav">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="about.html">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                      </ul>
+                      <form class="form-inline">
+                        <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+                      </form>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </header>
+            <!-- end header section -->
+      </div>
+       <!-- Blog post content -->
+       <section class="blog_post layout_padding">
+        <div class="container">
+          <div class="row">
+            <!-- Main content -->
+            <div class="col-lg-8">
+              <article class="blog_detail">
+                <!-- Post meta -->
+                <div class="post_meta">
+                  <div class="meta_item">
+                    <i class="fa fa-calendar"></i>
+                    <span>March 20, 2024</span>
+                  </div>
+                  <div class="meta_item">
+                    <i class="fa fa-folder"></i>
+                    <span>Programming</span>
+                  </div>
+                  <div class="meta_item">
+                    <i class="fa fa-user"></i>
+                    <span>By Hồ Phước Nam</span>
+                  </div>
+                </div>
+    
+                <!-- Post title -->
+                <h1 class="post_title">Khai báo lớp trong Javascript</h1>
+    
+                <!-- Post content -->
+                <div class="post_content">
+    
+                 
+                    <div>
+                        <h2>1. Khai báo lớp (Class Declaration)</h2>
+                    
+                    <p>
+                        Để giúp bạn định nghĩa lớp đầu tiên, chúng ta sẽ đưa ra một kịch bản đơn giản, sau đó từng bước thay đổi trong suốt chương này.
+
+                        Hãy giả sử chúng ta có một công ty vận tải nhỏ với nhiều loại phương tiện khác nhau. Trước mắt, chúng ta chỉ quan tâm đến việc định vị các phương tiện này. Mỗi phương tiện sẽ có một mã định danh riêng (được biểu thị bằng một chuỗi ký tự). Mỗi phương tiện cũng sẽ ở một trạng thái nhất định (“free” - rảnh, “busy” - bận, “unavailable” - không khả dụng). Vị trí địa lý của phương tiện sẽ được xác định bằng kinh độ và vĩ độ. Ngoài ra, thời gian cập nhật vị trí cuối cùng cũng sẽ được lưu trữ.
+
+                        Trước khi đi sâu vào khai báo lớp, chúng ta sẽ thử viết kịch bản này bằng phương pháp dựa trên hàm khởi tạo (constructor function) mà chúng ta đã học trước đó.
+                       
+                    </p>
+                    <div class="example_section">
+                        <div class="example_card">
+                          <h4>Hãy xem đoạn mã dưới đây:</h4>
+                          <div class="code_block">
+                            <pre>
+let Vehicle = function(id, latitude, longitude){
+    this.setPosition = function(latitude, longitude) {
+        this.time = Date.now();
+        this.longitude = longitude;
+        this.latitude = latitude;
+    };
+    this.id = id;
+    this.status = "unavailable";
+    this.time = Date.now();
+    this.latitude = latitude;    
+    this.longitude = longitude;
+};
+let vehicle1 = new Vehicle("AL1024", 59.358615, 17.947589);
+vehicle1.setPosition(59.367647, 18.213451);
+console.log(vehicle1);                                                         
+                            </pre>
+                          </div>
+                        </div>
+                      </div>
+                    <div>
+                    
+                        <p>
+                          Chúng ta đã định nghĩa hàm Vehicle, được sử dụng như một hàm khởi tạo. Như đã nhắc lại, mỗi lần gọi hàm này với từ khóa new sẽ tạo ra một đối tượng mới. Nội dung của đối tượng phụ thuộc vào hàm khởi tạo và các tham số được truyền vào. Theo kịch bản của chúng ta, các thuộc tính đã được định nghĩa bao gồm: id, status, time, latitude, longitude và phương thức setPosition.
+
+                          Lưu ý việc sử dụng phương thức Date.now khi khởi tạo thuộc tính time. Nó trả về thời gian hiện tại dưới dạng số mili giây kể từ ngày 1 tháng 1 năm 1970 00:00:00 UTC (thời điểm khởi đầu UNIX). Với sự trợ giúp của các phương thức khác trong lớp Date, chúng ta có thể chuyển đổi định dạng này thành thứ gì đó dễ đọc hơn. 
+                        </p>   
+                </div>
+                <div>
+                    <h2>2. Tối ưu hóa mã nguồn</h2>
+                    <p>
+                      Trước tiên, chúng ta nhận thấy đoạn mã tương tự được lặp lại ở hai nơi: trong phương thức setPosition và khi khởi tạo vị trí với dữ liệu được cung cấp khi tạo đối tượng.
+
+                      Đây là sự dư thừa, và chúng ta có thể loại bỏ bằng cách sử dụng phương thức setPosition ngay trong giai đoạn khởi tạo đối tượng.
+                    </p>
+                </div>
+                
+                  <div class="example_card">
+                    <h4>Hãy xem đoạn mã dưới đây:</h4>
+                    <div class="code_block">
+                      <pre>
+let Vehicle = function(id, latitude, longitude){
+    this.setPosition = function(latitude, longitude) {
+        this.time = Date.now();
+        this.longitude = longitude;
+        this.latitude = latitude;
+    };
+    this.id = id;
+    this.status = "unavailable";
+    this.setPosition(latitude, longitude);
+};                                                      
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+  
+                <div>
+                    <p> Bạn có thấy sự khác biệt không?</p>
+                    <p>
+            
+
+                      Chúng ta có thể cải thiện thêm một điều nữa: cách truyền tham số vào hàm khởi tạo và phương thức setPosition.
+                      
+                      Những gì chúng ta sắp trình bày không chỉ áp dụng cho hàm khởi tạo mà còn với các đối tượng khác, nhưng đây là một ví dụ hay để hiểu kỹ thuật mới này.
+                      
+                      Mọi thứ chúng ta viết đến giờ là hoàn toàn đúng. Tuy nhiên, việc truyền nhiều tham số có kiểu giống nhau đôi khi có thể dẫn đến nhầm lẫn và sai sót.
+                    </p>
+                </div>
+                <div>
+                    <h2>3. Dùng Destructuring để giảm lỗi</h2>
+                    <p>
+                      
+                      Thay vì truyền nhiều tham số rời rạc, chúng ta có thể gói tất cả chúng vào một đối tượng và truyền đối tượng đó làm tham số duy nhất. Điều này giúp xác định rõ ràng từng giá trị nhờ vào tên thuộc tính của chúng, thay vì dựa vào thứ tự.
+                    </p>
+                </div>
+               
+                  <div class="example_card">
+                    <h4>Hãy xem đoạn mã dưới đây:</h4>
+                    <div class="code_block">
+                      <pre>
+let Vehicle = function(initialData){
+    let {id, latitude, longitude} = initialData;
+    this.setPosition = function(latitude, longitude) {
+        this.time = Date.now();
+        this.longitude = longitude;
+        this.latitude = latitude;
+    };
+    this.id = id;
+    this.status = "unavailable"; 
+    this.setPosition(latitude, longitude);
+};
+let vehicle1 = new Vehicle({id: "AL1024", latitude: 59.367647, longitude: 18.213451});
+let vehicle2 = new Vehicle({longitude: 18.213423, latitude: 59.367628, id: "AL1024"});                                                  
+                      </pre>
+                    </div>
+                  </div>
+              
+             
+                <div>
+                  <p>
+                    Khi gọi hàm khởi tạo, chúng ta chỉ truyền một tham số – một đối tượng có các thuộc tính id, latitude, và longitude. Thứ tự của chúng là tùy ý.
+                  </p>
+                </div>
+               
+                  <div class="example_card">
+                    <h4>Đoạn mã sau cho thấy cách phân rã (destructuring assignment) hoạt động:</h4>
+                    <div class="code_block">
+                      <pre>
+let {id, latitude, longitude} = initialData;                                                 
+                      </pre>
+                    </div>
+                  </div>
+            
+               
+                <div class="example_card">
+                  <h4>Nó tương đương với:</h4>
+                  <div class="code_block">
+                    <pre>
+let id = initialData.id;
+let latitude = initialData.latitude;
+let longitude = initialData.longitude;                                              
+                    </pre>
+                  </div>
+                </div>
+              
+                <div>
+                    <h2>4. Chuyển đổi sang Khai báo Lớp (Class Declaration)</h2>
+                    <p>
+                      Trong JavaScript hiện đại, chúng ta thường sử dụng cú pháp khai báo lớp (class) thay vì cách tiếp cận dựa trên hàm khởi tạo truyền thống. Điều này không chỉ giúp mã rõ ràng hơn mà còn dễ bảo trì hơn trong các dự án lớn.
+
+                     
+                    </p>
+                </div>
+                <div class="example_card">
+                  <h4> Dưới đây là cách chúng ta chuyển đổi đoạn mã hiện tại sang sử dụng cú pháp khai báo lớp:</h4>
+                  <div class="code_block">
+                    <pre>
+class Vehicle {
+  constructor(initialData) {
+      let { id, latitude, longitude } = initialData;
+      this.id = id;
+      this.status = "unavailable";
+      this.setPosition(latitude, longitude);
+  }
+
+  setPosition(latitude, longitude) {
+      this.time = Date.now();
+      this.longitude = longitude;
+      this.latitude = latitude;
+  }
+}
+let vehicle1 = new Vehicle({ id: "AL1024", latitude: 59.367647, longitude: 18.213451 });
+console.log(vehicle1);                                              
+                    </pre>
+                  </div>
+                </div>
+                <div>
+                    <h4>Cách hoạt động</h4>
+                    <ul >
+                      <li>Từ khóa class được sử dụng để khai báo một lớp.</li>
+                      <li>Hàm khởi tạo (constructor) được định nghĩa trong lớp để khởi tạo các đối tượng.</li>
+                      <li>Phương thức setPosition được khai báo bên trong lớp, nhưng nằm ngoài constructor.</li>   
+                  </ul>
+                  <p>
+                    Lưu ý rằng trong khai báo lớp, không cần từ khóa function để định nghĩa các phương thức.
+                  </p>
+                </div>
+                <div>
+                  <h4>Ưu điểm của Khai báo Lớp</h4>
+                  <ul >
+                    <li>Rõ ràng hơn: Cấu trúc lớp giúp dễ dàng hiểu các thành phần và chức năng.</li>
+                    <li>Khả năng tái sử dụng và mở rộng: Lớp hỗ trợ kế thừa và các phương thức tĩnh.</li>
+                    <li>Hỗ trợ tốt hơn cho ES6+: JavaScript hiện đại khuyến khích sử dụng cú pháp lớp.</li>   
+                </ul>
+              </div>
+                <div>
+                    <h2>5. Tối ưu hóa Lớp (Class Optimization)</h2>
+                    <p>
+                      Ở giai đoạn này, chúng ta sẽ tập trung vào việc cải thiện lớp Vehicle bằng cách:
+                    </p>
+                    <ul >
+                      <li>Xác định các giá trị mặc định.</li>
+                      <li>Sử dụng tính năng tĩnh (static) và các thuộc tính chỉ đọc (read-only).</li>
+                  </ul>
+                  <h4>Xác định Giá trị Mặc định</h4>
+                  <p>
+                    Chúng ta có thể cung cấp các giá trị mặc định cho các thuộc tính, giảm thiểu khả năng lỗi khi dữ liệu đầu vào không đầy đủ.
+                  </p>
+                  <div class="code_block">
+                    <pre>
+class Vehicle {
+    constructor(initialData = {}) {
+        let { id = "Unknown", latitude = 0, longitude = 0 } = initialData;
+        this.id = id;
+        this.status = "unavailable";
+        this.setPosition(latitude, longitude);
+    }
+
+    setPosition(latitude, longitude) {
+        this.time = Date.now();
+        this.longitude = longitude;
+        this.latitude = latitude;
+    }
+}
+let vehicle2 = new Vehicle();
+console.log(vehicle2);                                             
+                    </pre>
+                  </div>
+                  <h4>Phương thức và Thuộc tính Tĩnh</h4>
+                  <p>Phương thức tĩnh (static) là những phương thức thuộc về lớp thay vì các đối tượng cụ thể.
+
+                  </p>
+                  <div class="example_card">
+                    <h4> Ví dụ:</h4>
+                    <div class="code_block">
+                      <pre>
+class Vehicle {
+  static defaultStatus = "unavailable";
+
+  constructor(initialData = {}) {
+      let { id = "Unknown", latitude = 0, longitude = 0 } = initialData;
+      this.id = id;
+      this.status = Vehicle.defaultStatus;
+      this.setPosition(latitude, longitude);
+  }
+
+  setPosition(latitude, longitude) {
+      this.time = Date.now();
+      this.longitude = longitude;
+      this.latitude = latitude;
+  }
+}
+console.log(Vehicle.defaultStatus);                                       
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+            
+                <div>
+                    <h2>6. Kết Luận</h2>
+                    <p>
+                      Chúng ta vừa trải qua quá trình xây dựng lớp từ cơ bản đến nâng cao. Việc chuyển đổi từ cách khai báo truyền thống sang cú pháp lớp không chỉ giúp mã sạch hơn mà còn chuẩn bị tốt hơn cho các yêu cầu phức tạp trong tương lai.
+                    </p>
+                </div>
+              </article>
+            </div>
+    
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+              <div class="blog_sidebar">
+                <div class="sidebar_widget">
+                  <h4>Recent Posts</h4>
+                  <ul class="recent_post_list">
+                    <li>
+                      <a href="#">
+                        <a href="about-javascript.html" class="post_title">15 Điều thú vị về JavaScript </a>
+                        <div class="post_date">December 28, 2024</div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+    
+                <div class="sidebar_widget">
+                  <h4>Categories</h4>
+                  <ul class="category_list">
+                    <li><a href="#">Java Script<span>(5)</span></a></li>
+                    <li><a href="#">Programming <span>(8)</span></a></li>
+                    <li><a href="#">Web Development <span>(3)</span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </body>
+      
+
+</html>

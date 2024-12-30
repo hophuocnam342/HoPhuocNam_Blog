@@ -1,0 +1,412 @@
+<html></html>
+    <head>
+        <!-- Basic -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Site Metas -->
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <style>
+            p {
+                text-indent: 30px; /* Thụt vào 30px */
+            }
+        </style>
+      
+        <title>6 Design Patterns thông dụng trong JavaScript cần biết - Nam</title>
+      
+        <!-- slider stylesheet -->
+        <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+      
+        <!-- font wesome stylesheet -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+      
+        <!-- bootstrap core css -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+      
+        <!-- fonts style -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="css/style.css" rel="stylesheet" />
+        <!-- responsive style -->
+        <link href="css/responsive.css" rel="stylesheet" />
+        <link href="css/blog-post.css" rel="stylesheet" />
+    </head>
+      <body>
+        <div class="hero_area1">
+          <!-- header section strats -->
+          <header class="header_section">
+              <div class="container">
+                <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+                  <!-- <a class="navbar-brand mr-5" href="index.html">
+                    <img src="images/logo.png" alt="">
+                    <span>
+                      Fregg
+                    </span>
+                  </a> -->
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                      <ul class="navbar-nav">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="about.html">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                      </ul>
+                      <form class="form-inline">
+                        <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+                      </form>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </header>
+            <!-- end header section -->
+      </div>
+    
+      <!-- Blog post content -->
+      <section class="blog_post layout_padding">
+        <div class="container">
+          <div class="row">
+            <!-- Main content -->
+            <div class="col-lg-8">
+              <article class="blog_detail">
+                <!-- Post meta -->
+                <div class="post_meta">
+                  <div class="meta_item">
+                    <i class="fa fa-calendar"></i>
+                    <span>December 29, 2024</span>
+                  </div>
+                  <div class="meta_item">
+                    <i class="fa fa-folder"></i>
+                    <span>Programming</span>
+                  </div>
+                  <div class="meta_item">
+                    <i class="fa fa-user"></i>
+                    <span>By Hồ Phước Nam</span>
+                  </div>
+                </div>
+    
+                <!-- Post title -->
+                <h1 class="post_title">6 Design Patterns thông dụng trong JavaScript cần biết</h1>
+                <p class="intro">
+                    Để tiến sâu hơn trong lập trình với ngôn ngữ JavaScript, các bạn nên tích luỹ thêm các kiến thức về các design patterns để giúp code tốt, có cấu trúc và có tổ chức rõ ràng hơn.
+
+                    Trong bài viết này, chúng ta sẽ cùng khám phá một số Design patterns thường được sử dụng trong JavaScript.
+                </p>
+                <!-- Post content -->
+                <div class="post_content">
+    
+                  <div class="content_section">
+                    <div>
+                        <h2>1. Constructor Pattern</h2>
+                        <p>
+                            Trong các ngôn ngữ lập trình hướng đối tượng, constructor là một phương thức đặt biệt được sử dụng để khởi tạo đối tượng mới cùng với các thuộc tính khởi tạo ban đầu.
+                        </p>
+                        <p>
+                            Trong JavaScript, hầu như mọi thứ đều là một object và chúng ta thường quan tâm đến việc khởi tạo đối tượng với Object Constructor.
+                        </p>
+                        <div class="code_block">
+                            <pre>
+// Sử dụng {}
+const person  = {};
+
+// Sử dụng Object()
+const person = new Object();
+                            </pre>
+                        </div>
+                        <p>Ngoài ra, bạn cũng có thể khởi tạo 1 constructor bằng function</p>
+                        <div class="code_block">
+                            <pre>
+function Person() {}
+
+const personA = new Person();
+
+personA.name = "Codestus.com";
+                            </pre>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>2. Prototype Pattern</h2>
+                    <p>Prototype Pattern là một object-based. Nó tạo ra một phiên bản mới của đối tượng dựa trên đối tượng nguyên mẫu. Mục tiêu chính là tạo ra một đối tượng sử dụng làm làm bản thiết kế cho mỗi đối tượng được tạo sau đó.</p>
+                    <p>Nếu bạn cảm thấy khởi tạo một đối tượng mới trực tiếp quá phức tạp và không hiệu quả, trong trường hợp này, sử dụng Prototype Pattern là một cách ý tưởng không tồi.</p>
+                    <p>Bạn có thể triển khai Prototype Pattern theo các như sau:</p>
+                    <div class="code_block">
+                        <pre>
+// Khởi tạo đối tượng
+function Person(name, age) {
+	this.name = name;
+	this.age = age;
+
+	this.showName = () => console.log(this.name);
+}
+
+// Clone prototype của đối tượng
+function PersonPrototype(prototype) {
+	const _prototype = prototype;
+	
+	this.clone = () => {
+		let person = new Person();
+		person.name = _prototype.name;
+		person.age = _prototype.age;
+		
+		return person;
+	}
+}
+
+const person = new Person("Codestus.com", 20);
+const prototypeOfPerson = new PersonPrototype(person);
+const tester = prototypeOfPerson.clone();
+
+tester.showName() 
+                        </pre>
+                    </div>
+                    <p>Ngoài ra, bạn cũng có thể sử dụng khái niệm kế thừa prototype đã tích hợp sẵn trong đối tượng Object.</p>
+                    <div class="code_block">
+                        <pre>
+const person = {
+    name: "Codestus.com",
+    age: 20,
+}
+
+const personA = Object.assign({}, person);
+                        </pre>
+                    </div>
+                    </div>
+                    <div>
+                        <h2>3. Command Pattern </h2>  
+                        <p>Mục đích của Command Pattern là đóng gói các hành động dưới dạng đối tượng. Cho phép phân tách hệ thống các đối tượng nhận yêu cầu với các đối tượng thực thi yêu cầu, có khả năng ghép nối. Trong đó, các yêu cầu được gọi là sự kiện và các mã để thực thi yêu cầu được gọi là trình xử lý sự kiện.</p>
+                        <p>Nào bây giờ hãy tưởng tượng bạn nhận được yêu cầu xây dựng hệ thống thanh toán cho một cửa hàng thương mại điện tử. Tuỳ thuộc vào loại phương thức thanh toán, bạn sẽ chọn cho mình một quy trình cụ thể.</p>
+                        <p>Ví dụ</p>
+                        <div class="code_block">
+                            <pre>
+if(paymentMethod === "creditcard") {
+    // Xử lý thanh toán
+}
+                            </pre>
+                        </div>
+                        <p>Một số phương thức thanh toán chỉ cần một bước duy nhất, một số khác thì không. Dựa vào ví dụ trên, chúng ta sẽ thử xây dựng quy trình thanh toán.</p>
+                        <p>Command Pattern là một giải pháp tốt để áp dụng trong ví dụ này. Cụ thể về ví dụ, hệ thống xử lý của bạn sẽ không biết nhiều thông tin về việc xử lý từng phương thức thanh toán như thế nào. Các yêu cầu xử lý thanh toán và nơi xử lý thanh toán sẽ tách biệt và được ghép nối lại từ hệ thống xử lý.</p>
+                        <div class="code_block">
+                            <pre>
+// Phần lõi điều hướng xử lý
+function Command(operation) {
+	this.operation = operation;
+}
+
+Command.prototype.execute = function() {
+	this.operation.execute()
+}
+
+// Hàm phương thức thanh toán
+function ProccessPaypalPayment() {
+	return {
+		execute: function() {
+			console.log("Payment with Paypal");
+		}
+	}
+}
+
+// Hàm phương thức thanh toán
+function ProccessCreditCardPayment() {
+	return {
+		execute: function() {
+			console.log("Payment with Credit Card");
+		}
+	}
+}
+
+// Hàm xử lý thanh toán nhận yêu cầu và điều hướng xử lý thực thi
+function PaymentHandler() {
+	let paymentCommand;
+	
+	return {
+		setPaymentCommand(command) {
+			this.paymentCommand = command;
+		},
+		
+		executeCommand() {
+			this.paymentCommand.execute();
+		}
+	}
+}
+
+function main() {
+	let systemPayment = new PaymentHandler();
+	
+	systemPayment.setPaymentCommand(new  Command(new ProccessPaypalPayment));
+	systemPayment.executeCommand();
+}
+
+main()
+                            </pre>
+                        </div>
+                    </div>
+                    <div>
+                    <h2>4. Observer Pattern</h2>
+                    <p>
+                        Bạn có bao giờ Đăng ký nhận tin ở trang web nào chưa?. Chắc hẵn là rồi, khi bạn đăng ký nhận tin, địa chỉ email của bạn sẽ được lưu xuống hệ thống. Khi blog, tạo bài viết mới, bạn sẽ nhận được thông báo về nó. Đây là Observer. (Tuy nhiên, cũng không hẵn hệ thống Subscribe Email nào cũng thực hiện theo cách này).
+                    </p>
+                    <p>Observer Pattern cung cấp cho chúng ta một mô hình cơ bản bao gồm Subscribe, Unsubscribe và Notify.</p>
+                    <p>Ví dụ</p>
+                    <div class="code_block">
+                        <pre>
+// Nơi lưu trữ người đăng ký và các phương thức
+function Observable() {
+	this.observers = [];
+}
+
+// Đăng ký nhận tin
+Observable.prototype.subscribe = function(subscriber) {
+	this.observers.push(subscriber);
+}
+
+// Huỷ đăng ký nhận tin
+Observable.prototype.unsubscribe = function(subscriber) {
+	this.observers = this.observers.filter(observer => observer !== subscriber);
+}
+
+// Thông báo khi có bài viết mới
+Observable.prototype.notify = function(data) {
+	this.observers.forEach(observer => {
+		observer(data);
+	})
+}
+
+const usersSubscribe = new Observable();
+
+const userOne = (data) => console.log("Subscriber 1 " + data);
+const userTwo = (data) => console.log("Subscriber 2 " + data);
+const userThree = (data) => console.log("Subscriber 3 " + data);
+
+usersSubscribe.subscribe(userOne); // Người đăng ký
+usersSubscribe.subscribe(userTwo); // Người đăng ký
+usersSubscribe.subscribe(userThree); // Người đăng ký
+usersSubscribe.unsubscribe(userOne); // Người huỷ đăng ký
+
+usersSubscribe.notify("được thông báo bài viết mới")
+                        </pre>
+                    </div>
+                   </div>
+                    <div>
+                        <h2>5. Singleton Pattern</h2>
+                       <p>Đây là một design pattern vô cùng nổi tiếng, chúng ta sử dụng singleton pattern để hạn chế khởi tạo đối tượng, giảm bớt được khai báo đối tượng dư thừa, chỉ khởi tạo một lần duy nhất và có thể truy cập toàn cục. Đây sẽ là một pattern vô cùng hữu ích cho các trường hợp bạn phải xử lý 1 tác vụ ở nhiều nơi, có thể hạn chế được số lần khai báo đối tượng không cần thiết.</p>
+                       <p>Cùng thử xem ví dụ:</p>
+                       <div class="code_block">
+                        <pre>
+const utils = (() => {
+    let instance;
+    
+    function initialize() {
+        return {
+            sum: function() {
+                let nums = Array.prototype.slice.call(arguments);
+                return nums.reduce((numb, total) => numb + total, 0)
+            }
+        }
+    }
+    
+    return {
+        getInstance: function() {
+            // Nếu đối tượng này chưa được khởi tạo
+            if(!instance) {
+                // Khởi tạo lần đầu tiên
+                instance = new initialize();
+            }
+            
+            // Không khởi tạo nữa, chỉ trả về đối tượng đã khởi tạo
+            return instance;
+        }
+    }
+})()
+
+const firstU =  utils.getInstance(); // Cùng lấy 1 instance
+const secondU =  utils.getInstance(); // Cùng lấy 1 instance
+
+console.log(firstU === secondU); // Trả về true là đúng vì cùng thuộc 1 instance duy nhất
+
+console.log(firstU.sum(1,2,3,4,5)) // 15 // working
+                        </pre>
+                       </div>
+                    </div>
+                    <div>
+                      <h2>6. Module Pattern</h2>
+                      <p>Module pattern là design pattern được sinh ra để triển khai khái niệm modules software. Một pattern được sử dụng thông dụng trong JavaScript. Khi kiểm tra bên trong mã nguồn của các thư viện, bạn sẽ nhận thấy cách khởi tạo của nó gần giống như Singleton Pattern. Đây là một design pattern sinh ra để tuân thủ tính bao đóng như các ngôn ngữ lập trình OOP (Các đối tượng class luôn có tính bao đóng, để tránh các truy cập, chỉnh sửa trái phép).</p>
+                      <p>Ví dụ:</p>
+                      <div class="code_block">
+                        <pre>
+const person = (() => {
+    let name = "Codestus";
+    let age = 20;
+    
+    return {
+        getName: () => {
+            return name;
+        },
+        
+        getAge: () => {
+            return age;
+        },
+        
+        setName: (_name) => name = _name,
+        setAge: (_age) => name = _age,
+    }
+})()
+                        </pre>
+                      </div>
+                      <p>Như đoạn mã phía trên, bạn chỉ có thẻ truy cập get hoặc set thông qua các phương thức đã được cung cấp trong @return chứ không được quyền truy cập vào biến chỉnh sửa.</p>
+                    </div>
+                    <div>
+                      <h2>7. Kết luận</h2>
+                     <p>Những Design Patterns trên sinh ra để giải quyết những vấn đề nan giải của JavaScript, hãy dùng một cách đúng chứ đừng lạm dụng nó. Có thể, nó không giúp đơn giản vấn đề nhưng nó giúp bạn có một luồng xử lý dữ liệu rõ ràng. Ngoài ra, cũng không nên áp dụng design patterns với một số vấn đề quá đơn giản, điều này sẽ mang tác dụng ngược lại.</p>
+                    </div>
+                </div>
+              </article>
+            </div>
+    
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <div class="blog_sidebar">
+                  <div class="sidebar_widget">
+                    <h4>Recent Posts</h4>
+                    <ul class="recent_post_list">
+                      <li>
+                        <a href="#">
+                          <a href="testingjv.html" class="post_title">Kiểm thử với JUnit trong Java </a>
+                          <div class="post_date">December 29, 2024</div>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+      
+                  <div class="sidebar_widget">
+                    <h4>Categories</h4>
+                    <ul class="category_list">
+                      <li><a href="#">JavaScript<span>(6)</span></a></li>
+                      <li><a href="#">Programming <span>(8)</span></a></li>
+                      <li><a href="#">Web Development <span>(7)</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+            </div>
+      </section>
+    </body>
+      
+
+</html>

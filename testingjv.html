@@ -1,0 +1,333 @@
+<html>
+    <head>
+        <!-- Basic -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Site Metas -->
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <style>
+            p {
+                text-indent: 30px; /* Thụt vào 30px */
+            }
+        </style>
+      
+        <title>Kiểm thử đơn vị trong Java - Nam</title>
+      
+        <!-- slider stylesheet -->
+        <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+      
+        <!-- font wesome stylesheet -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+      
+        <!-- bootstrap core css -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+      
+        <!-- fonts style -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="css/style.css" rel="stylesheet" />
+        <!-- responsive style -->
+        <link href="css/responsive.css" rel="stylesheet" />
+        <link href="css/blog-post.css" rel="stylesheet" />
+    </head>
+      <body>
+        <div class="hero_area1">
+          <!-- header section strats -->
+          <header class="header_section">
+              <div class="container">
+                <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+                  <!-- <a class="navbar-brand mr-5" href="index.html">
+                    <img src="images/logo.png" alt="">
+                    <span>
+                      Fregg
+                    </span>
+                  </a> -->
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                      <ul class="navbar-nav">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="about.html">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                      </ul>
+                      <form class="form-inline">
+                        <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+                      </form>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </header>
+            <!-- end header section -->
+      </div>
+    
+      <!-- Blog post content -->
+      <section class="blog_post layout_padding">
+        <div class="container">
+          <div class="row">
+            <!-- Main content -->
+            <div class="col-lg-8">
+              <article class="blog_detail">
+                <!-- Post meta -->
+                <div class="post_meta">
+                  <div class="meta_item">
+                    <i class="fa fa-calendar"></i>
+                    <span>December 29, 2024</span>
+                  </div>
+                  <div class="meta_item">
+                    <i class="fa fa-folder"></i>
+                    <span>Programming</span>
+                  </div>
+                  <div class="meta_item">
+                    <i class="fa fa-user"></i>
+                    <span>By Hồ Phước Nam</span>
+                  </div>
+                </div>
+    
+                <!-- Post title -->
+                <h1 class="post_title">Kiểm thử với JUnit trong Java</h1>
+    
+                <!-- Post content -->
+                <div class="post_content">
+    
+                  <div class="content_section">
+                    <div>
+                        <h2>1. Giới thiệu về JUnit.</h2>
+                        <p>
+                          JUnit là một framework đơn giản dùng cho việc tạo các unit testing tự động, và chạy các test có thể lặp đi lặp lại. Nó chỉ là một phần của họ kiến trúc xUnit cho việc tạo các unit testing. JUnit là một chuẩn trên thực tế cho unit testing trong Java. JUnit về nguồn gốc được viết bởi 2 tác giả Erich Gamma và Kent Beck.
+                        </p>
+                    </div>
+                    <div>
+                        <h2>2. Những đặc điểm đáng lưu ý của JUnit</h2>
+                    <ul >
+                        <li>Xác nhận (assert) việc kiểm tra kết quả được mong đợi</li>
+                        <li>Các Test Suite cho phép chúng ta dễ dàng tổ chức và chạy các test</li>
+                        <li>Hỗ trợ giao diện đồ họa và giao diện dòng lệnh: Các test case của JUnit là các lớp của Java, các lớp này bao gồm một hay nhiều các phương thức unit testing, và những test này lại được nhóm thành các Test Suite. Mỗi phương thức test trong JUnit phải được thực thi nhanh chóng. Tốc độ là điều tối quan trọng vì càng nhiều test được viết và tích hợp vào bên trong quá trình xây dựng phần mềm, cần phải tốn nhiều thời gian hơn cho việc chạy toàn bộ Test Suite. Các lập trình viên không muốn bị ngắt quãng trong một khoãng thời gian dài trong khi các test chạy, vì thế các test mà chạy càng lâu thì sẽ có nhiều khả năng là các lập trình viên sẽ bỏ qua bước cũng không kém phần quan trọng này. Các test trong JUnit có thể là các test được chấp nhận hay thất bại, các test này được thiết kế để khi chạy mà không cần có sự can thiệp của con người. Từ những thiết kế như thế, bạn có thể thêm các bộ test vào quá trình tích hợp và xây dựng phần mềm một cách liên tục và để cho các test chạy một cách tự động.</li>
+                    </ul>   
+                    </div>
+                    <div>
+                        <h2>3. Kiến trúc tổng quan </h2>  
+                        <div class="img-box">
+                          <img src="images/junit.png" alt="">
+                      </div>
+                        <ul >
+                            <li>JUnit test framework cung cấp cho chúng ta các gói lớp có sẵn cho phép chúng ta viết các phương thức test một cách dễ dàng.</li>
+                            <li>TestRunner sẽ chạy các test và trả về kết quả là các Test Results.</li>
+                            <li>Các lớp của chương trình test chúng ta sẽ được kế thừa các lớp trừu tượng TestCase.</li>
+                            <li>Khi viết các Test Case chúng ta cần biết và hiểu lớp Assert class.</li>
+                        </ul>
+                        <p>Một số định nghĩa trong mô hình tổng quát:</p>
+                        <ul>
+                            <li>Test case : test case định nghĩa môi trường mà nó có thể sử dụng để chạy nhiều test khác nhau</li>
+                            <li>TestSuite : testsuite là chạy một tập các test case và nó cũng có thể bao gồm nhiều test suite khác, test suite chính là tổ hợp các test.</li>
+                        </ul>
+                    </div>
+                    <div>
+                    <h2>4. Cách viết một test case.</h2>
+                    <p> 
+                      Bạn muốn viết các unit test với JUnit. Việc đầu tiên bạn phải tạo một lớp con thừa kế từ lớp junit.framework.TestCase. Mỗi unit test được đại diện bởi một phương thức testXXX() bên trong lớp con của lớp TestCase. Ta có một lớp Person như sau:
+                    </p>
+                    <div class="example_section">
+                      <div class="example_card">
+                        <div class="code_block">
+                          <pre>
+public class Person {  
+  private String firstName;  
+  private String lastName;  
+  public Person(String firstName, String lastName) {  
+      if (firstName == null && lastName == null) {  
+          throw new IllegalArgumentException("Both names cannot be null");  
+      }  
+      this.firstName = firstName;  
+      this.lastName = lastName;  
+  }  
+  public String getFullName() {  
+      String first = (this.firstName != null) ? this.firstName : "?";
+      String last = (this.lastName != null) ? this.lastName : "?";  
+      return first + last;  
+  }  
+  public String getFirstName() {  
+      return this.firstName;  
+  }  
+  public String getLastName() {  
+      return this.lastName;  
+  }  
+}  
+                    
+                          </pre>
+                        </div>
+                      </div>
+                    </div>
+                    <p>Sau đó ta sẽ viết một test case đơn giản để test một số phương thức của lớp trên</p>
+                    <div class="example_section">
+                      <div class="example_card">
+                        <div class="code_block">
+                          <pre>
+import junit.framework.TestCase;  
+  public class TestPerson extends TestCase {  
+    public TestPerson(String name) {  
+        super(name);  
+    }  
+    /** 
+        * Xac nhan rang name duoc the hien dung dinh dang 
+    */  
+    public void testGetFullName() {  
+        Person p = new Person("Aidan", "Burke");  
+        assertEquals("Aidan Burke", p.getFullName());  
+    }  
+    /** 
+    * Xac nhan rang nulls da duoc xu ly chinh xac 
+    */  
+    public void testNullsInName() {  
+        Person p = new Person(null, "Burke");  
+        assertEquals("? Burke", p.getFullName());  
+        p = new Person("Tanner", null);  
+        assertEquals("Tanner ?", p.getFullName());  
+    }  
+  }                                            
+                          </pre>
+                        </div>
+                      </div>
+                    </div>
+                    <p>Lưu ý: mỗi unit test là một phương thức public và không có tham số, được bắt đầu bằng tiếp đầu ngữ test. Nếu bạn không tuân theo quy tắc đặt tên này thì JUnit sẽ không xác định được các phương thức test một các tự động.</p>
+                    <p>Để biên dịch TestPerson, chúng ta phải khai báo gói thư viện junit trong biến đường môi trường classpath:</p>
+                        <div class="code_block">
+                          <pre>
+set classpath=%classpath%;.;junit.jar 
+javac TestPerson                               
+                          </pre>
+                        </div>
+                    <p>Để chạy một JUnit TestCase, ta có 2 cách</p>
+                    <ul>
+                      <li>
+                        <p>Chạy với môi trường text, các bạn gõ lệnh:</p>
+                        <div class="code_block">
+                          <pre>
+java junit.textui.TestRunner TestPerson                           
+                          </pre>
+                        </div>
+                      </li>
+                      <li>
+                        <p>Chạy với môi trường đồ họa</p>
+                        <div class="code_block">
+                          <pre>
+java junit.swingui.TestRunner TestPerson                        
+                          </pre>
+                        </div>
+                      </li>
+                    </ul>
+                    <p>Chúng ta có thể chạy trực tiếp các TestCase mà không muốn kích hoạt một trong các test runner của JUnit. Chúng ta sẽ thêm phương thức main() vào test case. Ví dụ:</p>
+                    <div class="code_block">
+                      <pre>
+public class TestGame extends TestCase {  
+  …  
+  public static void main(String [args) {  
+      junit.textui.TestRunner.run(new TestSuite(TestGame.class))  
+  }  
+}                                                
+                      </pre>
+                    </div>
+                   </div>
+                    <div>
+                        <h2>5. Các phương thức Assert()</h2>
+                        <p>Các phương thức assertXXX() được dùng để kiểm tra các điều kiện khác nhau.junit.framework.TestCase, lớp cha cho tất cả các test case, thừa kế từ lớp junit.framework.Assert. Lớp này định nghĩa khá nhiều các phương thức assertXXX(). Các phương thức test hoạt động bằng cách gọi những phương thức này.</p>
+                        <p>Sau đây là mô tả các phương thức assertXXX() khác nhau có trong lớp junit.framework.Assert.</p>
+                        <ul>
+                          <li>assertEquals(): So sánh 2 giá trị để kiểm tra bằng nhau. Test sẽ được chấp nhận nếu các giá trị bằng nhau.</li>
+                          <li>assertFalse(): Đánh giá biểu thức luận lý. Test sẽ được chấp nhận nếu biểu thức sai.</li>
+                          <li>assertNotNull(): So sánh tham chiếu của một đối tượng với null. Test sẽ được chấp nhận nếu tham chiếu đối tượng khác null.</li>
+                          <li>assertNotSame(): So sánh địa chỉ vùng nhớ của 2 tham chiếu đối tượng bằng cách sử dụng toán tử ==. Test sẽ được chấp nhận nếu cả 2 đều tham chiếu đến các đối tượng khác nhau</li>
+                          <li>assertNull(): So sánh tham chiếu của một đối tượng với giá trị null. Test sẽ được chấp nhận nếu tham chiếu là null.</li>
+                          <li>assertSame(): So sánh địa chỉ vùng nhớ của 2 tham chiếu đối tượng bằng cách sử dụng toán tử ==. Test sẽ được chấp nhận nếu cả 2 đều tham chiếu đến cùng một đối tượng.</li>
+                          <li>assertTrue(): Đánh giá một biểu thức luận lý. Test sẽ được chấp nhận nếu biểu thức đúng fail(): Phương thức này làm cho test hiện hành thất bại, phương thức này thường được sử dụng khi xử lý các biệt lệ.</li>
+                        </ul>
+                          <p>Mặc dù bạn có thể chỉ cần sử dụng phương thức assertTrue() cho gần như hầu hết các test, tuy nhiên thì việc sử dụng một trong các phương thức assertXXX() cụ thể sẽ làm cho các test của bạn dễ hiểu hơn và cung cấp các thông điệp thất bại rõ ràng hơn.</p>
+                          <p>
+                            Tất cả các phương thức của bảng trên đều nhận vào một String không bắt buộc làm tham số đầu tiên. Khi được xác định, tham số này cung cấp một thông điệp mô tả test thất bại.
+                          </p>
+                          <p>Ví dụ:</p>
+                          <div class="code_block">
+                            <pre>
+assertEquals(employeeA, employeeB);  
+assertEquals(“Employees should be equal after the clone() operation.”, employeeA, employeeB).
+                            </pre>
+                          </div>
+                          <p>Phiên bản thứ 2 được ưa thích hơn vì nó mô tả tại sao test thất bại, điều này sẽ giúp cho việc sửa lỗi được dễ dàng hơn.</p>
+                    </div>
+                    <div>
+                      <h2>6. Set Up và Tear Down</h2>
+                      <p>Trong các test case, chúng ta có thể cần thiết lập một số điều kiện trước khi chạy test và xóa bỏ các điều kiện đó sau khi test chạy xong. Để làm được điều này, chúng ta có thể sử dụng các phương thức setUp() và tearDown().</p>
+                      <p>Phương thức setUp() được gọi trước khi chạy mỗi test case. Phương thức tearDown() được gọi sau khi chạy mỗi test case.</p>
+                      <p>Ví dụ:</p>
+                      <div class="code_block">
+                        <pre>
+public class TestPerson extends TestCase {  
+  …  
+  public void setUp() {  
+      person = new Person("Aidan", "Burke");  
+  }  
+  public void tearDown() {  
+      person = null;  
+  }  
+}
+                        </pre>
+                      </div>
+                      <p>Trong ví dụ trên, phương thức setUp() được gọi trước khi chạy mỗi test case. Phương thức tearDown() được gọi sau khi chạy mỗi test case.</p>
+                    </div>
+                    <div>
+                      <h2>7. Tổng kết.</h2>
+                      <p>Trên đây là bài viết về tổng quan sử dụng JUnit để hỗ trợ Testing trong Java, hy vọng bài viết hữu ích cho công việc của các bạn.Thanks!</p>
+                    </div>
+                </div>
+              </article>
+            </div>
+    
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <div class="blog_sidebar">
+                  <div class="sidebar_widget">
+                    <h4>Recent Posts</h4>
+                    <ul class="recent_post_list">
+                      <li>
+                        <a href="#">
+                          <a href="jquery.html" class="post_title">Khám phá JQuery trong JavaScript </a>
+                          <div class="post_date">December 29, 2024</div>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+      
+                  <div class="sidebar_widget">
+                    <h4>Categories</h4>
+                    <ul class="category_list">
+                      <li><a href="#">Java<span>(6)</span></a></li>
+                      <li><a href="#">Programming <span>(8)</span></a></li>
+                      <li><a href="#">Web Development <span>(7)</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+            </div>
+      </section>
+    </body>
+      
+
+</html>

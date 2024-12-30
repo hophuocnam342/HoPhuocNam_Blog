@@ -1,0 +1,281 @@
+<html>
+    <head>
+        <!-- Basic -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Site Metas -->
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <style>
+            p {
+                text-indent: 30px; /* Thụt vào 30px */
+            }
+        </style>
+      
+        <title>Tổng quan về Maven - Nam</title>
+      
+        <!-- slider stylesheet -->
+        <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+      
+        <!-- font wesome stylesheet -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+      
+        <!-- bootstrap core css -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+      
+        <!-- fonts style -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="css/style.css" rel="stylesheet" />
+        <!-- responsive style -->
+        <link href="css/responsive.css" rel="stylesheet" />
+        <link href="css/blog-post.css" rel="stylesheet" />
+    </head>
+      <body>
+        <div class="hero_area1">
+          <!-- header section strats -->
+          <header class="header_section">
+              <div class="container">
+                <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+                  <!-- <a class="navbar-brand mr-5" href="index.html">
+                    <img src="images/logo.png" alt="">
+                    <span>
+                      Fregg
+                    </span>
+                  </a> -->
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                      <ul class="navbar-nav">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="about.html">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                      </ul>
+                      <form class="form-inline">
+                        <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+                      </form>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </header>
+            <!-- end header section -->
+      </div>
+    
+      <!-- Blog post content -->
+      <section class="blog_post layout_padding">
+        <div class="container">
+          <div class="row">
+            <!-- Main content -->
+            <div class="col-lg-8">
+              <article class="blog_detail">
+                <!-- Post meta -->
+                <div class="post_meta">
+                  <div class="meta_item">
+                    <i class="fa fa-calendar"></i>
+                    <span>December 29, 2024</span>
+                  </div>
+                  <div class="meta_item">
+                    <i class="fa fa-folder"></i>
+                    <span>Programming</span>
+                  </div>
+                  <div class="meta_item">
+                    <i class="fa fa-user"></i>
+                    <span>By Hồ Phước Nam</span>
+                  </div>
+                </div>
+    
+                <!-- Post title -->
+                <h1 class="post_title">Tổng quan về Maven</h1>
+    
+                <!-- Post content -->
+                <div class="post_content">
+                  <p class="intro">
+                    Maven là gì? Thuật ngữ đã được ứng dụng rộng rãi trong quá trình phát triển phần mềm. Công cụ ra đời với nhiều chức năng như quản lý, xây dựng và triển khai dự án. Vậy cách ứng dụng Maven như thế nào? Bài viết dưới đây sẽ chia sẻ có thể giúp bạn giải đáp những thắc mắc này.
+                  </p>
+    
+                  <div class="content_section">
+                    <div>
+                        <h2>1. Maven là gì?</h2>
+                        <p>
+                            Maven là một công cụ quản lý dự án và tự động hóa quá trình xây dựng phần mềm. Nền tảng được sử dụng chủ yếu trong việc quản lý các phụ thuộc, quản lý xây dựng chuỗi và quản lý thư viện của các dự án Java. 
+                        </p>
+                        <div class="img-box">
+                            <img src="images/Maven-1.png" alt="">
+                        </div>
+                        <p>
+                            Maven sử dụng các cấu hình tệp có cấu trúc như POM (Mô hình đối tượng dự án) để xác định cách xây dựng dự án, quản lý phụ thuộc và thực hiện các nhiệm vụ khác liên quan đến quá trình phát triển phần mềm.
+
+                            Nền tảng đã trở thành công cụ hữu ích được ứng dụng phổ biến trong cộng đồng phát triển phần mềm Java. Đây cũng là một trong những công cụ quản lý dự án thịnh hành nhất hiện nay.
+                        </p>
+                    </div>
+                    <div>
+                        <h2>2. Phân tích cách thức hoạt động của Maven</h2>
+                    
+                    <p>
+                        Maven hoạt động dựa trên cấu hình nguyên tắc để quản lý quá trình xây dựng và phát triển dự án phần mềm. 
+                        Dưới đây giới thiệu chi tiết về quá trình hoạt động của Maven:
+                    </p>
+                            <h4>Project Object Model (POM)</h4>
+                            <p>
+                                Maven sử dụng POM, một tệp XML để mô tả cách tổ chức và xây dựng dự án. 
+                                POM chứa thông tin về các phụ thuộc, cấu hình xây dựng, các plugin sẽ được sử dụng cũng như các tác vụ khác liên quan đến quá trình hình thành dự án xây dựng.
+                            </p>
+                            <h4>Quản lý phụ thuộc</h4>
+                            <p>
+                                Maven quản lý các thư viện và các phụ thuộc của dự án thông qua khái niệm "kho lưu trữ", nơi lưu trữ các thư viện và các tạo phẩm. Maven có khả năng tải xuống, 
+                                cài đặt và quản lý các phụ thuộc một cách tự động dựa trên thông tin được xác định trong POM.
+                            </p>
+                            <h4>Plugin</h4>
+                            <p>
+                                Maven sử dụng các plugin để thực hiện các nhiệm vụ cụ thể trong quá trình phát triển, 
+                                xem xét giới hạn biên dịch mã nguồn, kiểm tra, đóng gói ứng dụng và phát triển khai báo.
+                            </p>
+                            <h4>Báo cáo và tài liệu hóa</h4>
+                            <p>
+                                Maven cung cấp cơ chế để tạo các báo cáo về xây dựng, kiểm tra và phát triển khai báo. 
+                                Ngoài ra, nền tảng còn hỗ trợ tạo tài liệu về dự án và tương tác với các công cụ quản lý dự án khác.
+                            </p>
+                            <div class="img-box">
+                                <img src="images/Maven-2.jpg" alt="">
+                            </div>
+                    </div>
+                    <div>
+                        <h2>3. Những tính năng quan trọng của Maven</h2>  
+                        <p>
+                            Maven cung cấp nền tảng quản lý, 
+                            phát triển các dự án phần mềm một cách hiệu quả và tốt nhất thông qua những tính năng dưới đây:        
+                        </p>   
+                        <ul >
+                            <li>Maven hỗ trợ quản lý và cập nhật kho lưu trữ thư viện để đảm bảo liên tục cải tiến và phát triển cho các phần mềm dự án.</li>
+                            <li>Nền tảng ưu tiên sử dụng các phương pháp mang lại hiệu suất tối ưu nhất cho dự án và cung cấp cách thiết lập dự án dễ dàng.</li>
+                            <li>Hệ thống tự động quản lý và cập nhật phần phụ thuộc của dự án, đảm bảo tính nhất quán và sự tương thích giữa các phần mềm thành phần.</li>
+                            <li>Maven cung cấp các tính năng tương thích ngược để đảm bảo rằng các dự án có thể hoạt động theo cách tương thích trên các phiên bản trước của Maven.</li>
+                            <li>Nền tảng tích hợp thêm tính năng báo cáo và theo dõi mức độ nghiêm trọng của lỗi, giúp đảm bảo an toàn và độ tin cậy của dự án.</li>
+                            <li>Maven đảm bảo tính nhất quán được đảm bảo trên tất cả các dự án thông qua xác định và áp dụng quy tắc và chuẩn mực cụ thể.</li>
+                            <li>Công nghệ Maven có khả năng mở rộng thông tin bằng cách viết các phiên bản bổ sung hỗ trợ bằng ngôn ngữ có sẵn hoặc Java. Điều này có ý nghĩa lớn trong việc tùy chỉnh và mở rộng các tính năng của Maven theo nhu cầu cụ thể khác.</li>
+                        </ul>
+                    </div>
+                    <div>
+                    <h2>4. Tổng hợp những thành phần có trong Maven</h2>
+                    <p>
+                        Trong Maven, POM (Mô hình đối tượng dự án) là một tệp cấu hình XML đóng vai trò quan trọng trong việc định nghĩa cấu trúc và thiết lập của một phần mềm dự án. 
+                    </p>
+                    <div class="img-box">
+                        <img src="images/Maven-3.png" alt="">
+                    </div>
+                    <p>POM chứa các thông tin liên quan đến quản lý phụ thuộc, quản lý plugin, xây dựng quy trình, kiểm tra quy trình, khai báo quy trình phát triển.</p>
+                    <p>Bằng cách định nghĩa và quản lý thông tin này trong file POM, Maven có thể tự động quản lý việc xây dựng, kiểm thử và triển khai dự án một cách có hệ thống. POM là cơ sở của Maven và đóng vai trò quan trọng trong việc quản lý các dự án phần mềm.</p>
+                    <h4>Maven Directory </h4>
+                    <p>Maven sử dụng một chuẩn thư mục cấu trúc để tổ chức và quản lý các dự án:</p>
+                    <div class="img-box"></div>
+                        <img src="images/Maven-4.jpg" alt="">
+                        <ul>
+                            <li>src/main/java: Chứa các tệp mã nguồn Java.</li>
+                            <li>src/main/resources: Chứa các tệp tài nguyên như cấu hình và tài liệu.</li>
+                            <li>src/test/java: Chứa các tệp mã nguồn kiểm thử.</li>
+                            <li>src/test/resources: Chứa các tệp tài nguyên kiểm thử.</li>
+                            <li>target: Chứa các tệp kết quả xây dựng, kiểm thử và triển khai.</li>
+                        </ul>
+                        <p>Maven sử dụng các thư mục này để tự động quản lý việc xây dựng, kiểm thử và triển khai dự án một cách có hệ thống.</p>
+                        <h4>Central Repository</h4>
+                        <p>Kho lưu trữ Maven là nơi lưu trữ các thư viện phụ thuộc (phụ thuộc) và các plugin mà dự án của bạn cần để xây dựng và chạy. Maven sử dụng kho trung tâm lưu trữ chính thức được quản lý bởi Apache với tên gọi là Central Repository. Trung tâm lưu trữ này chứa hàng ngàn thư viện Java mã nguồn mở phổ biến phổ biến.</p>
+                        <div class="img-box"></div>
+                            <img src="images/Maven-5.jpg" alt="">
+                        <p>Ngoài Central Repository, bạn cũng có thể sử dụng các kho lưu trữ khác Maven như các kho lưu trữ cục bộ (kho lưu trữ cục bộ) hoặc kho lưu trữ từ các nhà cung cấp dịch vụ lưu trữ khác. </p>
+                        <p>Mục tiêu của việc sử dụng kho lưu trữ Maven là để quản lý và phân phối các phụ thuộc và plugin một cách dễ dàng. Điều này giúp các dự án Maven có thể sử dụng lại các thành phần một cách hiệu quả.</p>
+                    </div>
+                    <div>
+                        <h2>5. Đánh giá ưu và nhược điểm của Maven</h2>
+                        <h4>Ưu điểm:</h4>
+                        <ul>
+                            <li>Quản lý phụ thuộc hiệu quả: Maven cung cấp một cách tiếp cận dễ dàng để quản lý các phụ thuộc của dự án, đảm bảo sự nhất quán và tương thích giữa các phần mềm thành phần.</li>
+                            <li>Tích hợp liên kết và liên kết: Maven tự động tải về các thư viện cần thiết từ kho lưu trữ Maven và hoạt động tốt với các công cụ tích hợp liên kết (CI) như Jenkins.</li>
+                            <li>Mở rộng và tùy chỉnh: Maven cho phép mở rộng và tùy chỉnh thông tin về cách viết mới các plugin hoặc sử dụng bản mở rộng có sẵn của các plugin.</li>
+                        </ul>
+                        <h4> 
+                            Tuy nhiên, nó cũng có một số hạn chế và nhược điểm như:
+                        </h4>
+                        <ul>
+                            <li>Maven có thể khó sử dụng đối với những người mới bắt đầu trong việc phát triển phần mềm.</li>
+                            <li>Maven có thể không phù hợp với các dự án phần mềm có cấu trúc phức tạp và đòi hỏi sự tùy biến cao.</li>
+                            <li>Maven có thể không phù hợp với các dự án phần mềm có cấu trúc phức tạp và đòi hỏi sự tùy biến cao.</li>
+                        </ul>
+                        
+                    </div>
+                    <div>
+                        <h2>6. Phân loại kho lưu trữ Maven</h2>
+                        
+                        <p>
+                            Kho lưu trữ Maven được phân loại theo các loại sau:                    
+                        </p>
+                        <div class="img-box"></div>
+                        <img src="images/Maven-6.png" alt="">
+                        <p></p>
+                        <h4>Central Repository</h4>
+                        <p>Được quản lý bởi Apache, Central Repository là kho lưu trữ mặc định cho Maven chứa hàng ngàn thư viện Java open-source phổ biến và plugin.</p>
+                        <h4>Local Repository</h4>
+                        <p>Mỗi máy tính sẽ có một kho lưu trữ Maven cục bộ, nơi tất cả các thư viện và plugin từ các kho lưu trữ từ xa được tải về và lưu trữ để sử dụng trong quá trình phát triển. Thư mục mặc định cho kho lưu trữ cục bộ là thư mục ".m2" trong thư mục người dùng của bạn.</p>
+                        <h4>Remote Repository</h4>
+                        <p>Đây là các kho lưu trữ Maven được quản lý bởi các tổ chức hoặc cộng đồng, cung cấp các thư viện phụ thuộc và plugin cho việc phát triển phần mềm. Một số ví dụ nổi tiếng là repository của Google (Google Maven Repository) hoặc JCenter của Bintray.</p>
+                        <h4>Hosted Repository</h4>
+                        <p>Đây là các kho lưu trữ Maven được cung cấp bởi các dịch vụ lưu trữ như JFrog Artifactory hoặc Sonatype Nexus. Các tổ chức có thể tạo ra và quản lý kho lưu trữ maven riêng để lưu trữ các thành phần phần mềm nội bộ và chia sẻ cho các dự án trong tổ chức.</p>
+                    </div>
+                    <div>
+                        <h2>7. Kết luận</h2>
+                        <p>
+                            Qua bài viết trên đã giúp bạn đọc tìm hiểu những thông tin thú vị về Maven. Ngoài việc giải đáp Maven là gì, chúng ta có thể cập nhật thêm các tính năng ưu việt và cách sử dụng công cụ hiệu quả.
+                        </p>
+                    </div>
+                </div>
+              </article>
+            </div>
+    
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <div class="blog_sidebar">
+                  <div class="sidebar_widget">
+                    <h4>Recent Posts</h4>
+                    <ul class="recent_post_list">
+                      <li>
+                        <a href="#">
+                          <a href="java-datatypes.html" class="post_title">Kiểu Dữ Liệu Trong Java </a>
+                          <div class="post_date">December 28, 2024</div>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+      
+                  <div class="sidebar_widget">
+                    <h4>Categories</h4>
+                    <ul class="category_list">
+                      <li><a href="#">Java<span>(6)</span></a></li>
+                      <li><a href="#">Programming <span>(8)</span></a></li>
+                      <li><a href="#">Web Development <span>(7)</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+            </div>
+      </section>
+    </body>
+      
+
+</html>

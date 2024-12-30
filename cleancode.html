@@ -1,0 +1,366 @@
+<html></html>
+    <head>
+        <!-- Basic -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Site Metas -->
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <style>
+            p {
+                text-indent: 30px; /* Thụt vào 30px */
+            }
+        </style>
+      
+        <title>Để code ngắn gọn và tinh tế hơn trong Java - Nam</title>
+      
+        <!-- slider stylesheet -->
+        <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+      
+        <!-- font wesome stylesheet -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+      
+        <!-- bootstrap core css -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+      
+        <!-- fonts style -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="css/style.css" rel="stylesheet" />
+        <!-- responsive style -->
+        <link href="css/responsive.css" rel="stylesheet" />
+        <link href="css/blog-post.css" rel="stylesheet" />
+    </head>
+      <body>
+        <div class="hero_area1">
+          <!-- header section strats -->
+          <header class="header_section">
+              <div class="container">
+                <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+                  <!-- <a class="navbar-brand mr-5" href="index.html">
+                    <img src="images/logo.png" alt="">
+                    <span>
+                      Fregg
+                    </span>
+                  </a> -->
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                      <ul class="navbar-nav">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="about.html">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                      </ul>
+                      <form class="form-inline">
+                        <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+                      </form>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </header>
+            <!-- end header section -->
+      </div>
+    
+      <!-- Blog post content -->
+      <section class="blog_post layout_padding">
+        <div class="container">
+          <div class="row">
+            <!-- Main content -->
+            <div class="col-lg-8">
+              <article class="blog_detail">
+                <!-- Post meta -->
+                <div class="post_meta">
+                  <div class="meta_item">
+                    <i class="fa fa-calendar"></i>
+                    <span>December 29, 2024</span>
+                  </div>
+                  <div class="meta_item">
+                    <i class="fa fa-folder"></i>
+                    <span>Programming</span>
+                  </div>
+                  <div class="meta_item">
+                    <i class="fa fa-user"></i>
+                    <span>By Hồ Phước Nam</span>
+                  </div>
+                </div>
+    
+                <!-- Post title -->
+                <h1 class="post_title">Để code ngắn gọn và tinh tế hơn trong Java</h1>
+                <p class="intro">
+                    <p>Lập trình khai báo (declarative programming) là một kĩ thuật mang lại rất nhiều lợi ích: code ngắn gọn hơn, dễ thay đổi, dễ bảo trì và mở rộng.</p>
+                    <p>Java là một ngôn ngữ thuần túy OOP theo hướng lập trình mệnh lệnh (imperative programming), "trường phái" ngược lại của declarative. Nhưng kể từ Java 8 với lambda expression, Java đã có thể tham gia vào cuộc chơi này.</p>
+                    <p>Trong bài viết này, mình sẽ giới thiệu một số kĩ thuật để code Java theo phong cách declarative.</p>
+                </p>
+                <!-- Post content -->
+                <div class="post_content">
+    
+                  <div class="content_section">
+                    <div>
+                        <h2>1. Sử dụng List thay cho if else</h2>
+                        <P>
+                            Trong trường hợp cần so sánh nhiều điều kiện, mà các điều kiện ấy hoặc cùng AND && hoặc cùng OR ||, thì chúng ta có thể suy nghĩ việc sử dụng List để gom các phép so sánh lại.
+
+                        </P>
+                        <p>Xét ví dụ sau đây, kiểm tra một đối tượng xem nó có phải số nguyên hay không.</p>
+                        <div class="code_block">
+                            <pre>
+public boolean isInteger(Object o) {
+    if (o instanceof Byte || o instanceof Short ||
+        o instanceof Integer || o instanceof Long) {
+        return true;
+    }
+    return false;
+}
+                            </pre>
+                        </div>
+                        <p>Code lúc này sẽ dễ mở rộng hơn. Giả sử muốn thêm/bớt 1 điều kiện thì chỉ cần sửa List INT, thay vì phải "đụng chạm" đến code thực thi. Hơn nữa, chỉ với một chút refactor, chúng ta có thể khiến đoạn code trên tái sử dụng với các loại data khác.</p>
+                        <div class="code_block">
+                            <pre>
+static List&lt;Class&lt;?&gt;&gt; INT = Arrays.asList(Byte.class, Short.class, Integer.class, Long.class);
+static List&lt;Class&lt;?&gt;&gt; DECIMAL = Arrays.asList(Float.class, Double.class);
+static List&lt;Class&lt;?&gt;&gt; DATE = Arrays.asList(Date.class, LocalDate.class, Calendar.class);
+
+public static &lt;T&gt; boolean isInstanceOf(Collection&lt;Class&lt;?&gt;&gt; classes, T obj) {
+    return classes.stream().anyMatch(aClass -> aClass.isInstance(obj));
+}
+...
+
+boolean isInteger = isInstanceOf(INT, value);
+boolean isDecimal = isInstanceOf(DECIMAL, value);
+[...]
+                                    
+                            </pre>
+                        </div>
+                        <p></p>
+                        <h5>Bonus: Nếu là phép || thì ta dùng .anyMatch(), nếu là phép && thì ta dùng .allMatch().</h5>
+                    </div>
+                    <div>
+                        <h2>2. Sử dụng Predicate, Function, Consumer thay cho method</h2>
+                        <p>Lợi ích lớn nhất khi dùng lambda expression, chính là việc có thể gán method vào 1 đối tượng và lưu vào List hoặc Map. (Đây là đặc tính function as first-class citizen trong lập trình hàm)</p>
+                        <p>Xét ví dụ sau, đối tượng Account là một tài khoản trong ngân hàng.</p>
+                        <div class="code_block">
+                            <pre>
+class Account {
+    String owner;
+    int balance;
+}
+
+static void addMoney(Account acc, int amount) {
+    acc.balance += amount;
+}
+
+static void subtractMoney(Account acc, int amount) {
+    if (acc.balance < amount) {
+        System.out.println("Balance not enough.");
+        return;
+    }
+    acc.balance -= amount;
+}
+
+static void sendOwnerNotification(Account acc) {
+    System.out.println("Your current balance is " + acc.balance);
+}
+
+                                </pre>
+                        </div>
+                        <p>Lúc này khi thực hiện thao tác cộng/trừ số dư, hoặc thông báo số dư hiện tại, ta có thể viết như sau:</p>
+                        <div class="code_block">
+                        <pre>
+public static void doTransaction1(Account account) {
+    addMoney(account, 100);
+    addMoney(account, 500);
+    subtractMoney(account, 200);
+    sendOwnerNotification(account);
+}
+
+public static void doTransaction2(Account account) {
+    addMoney(account, 200);
+    sendOwnerNotification(account);
+    subtractMoney(account, 100);
+    addMoney(account, 800);
+    addMoney(account, 2000);
+    sendOwnerNotification(account);
+}
+
+...
+                            
+                        </pre>
+                        </div>
+                        <p>Đây là cách làm truyền thống, thuần túy mệnh lệnh (imperative). Và dễ nhận thấy, các transaction đang rơi vào tình trạng hardcode, thay đổi 1 transaction bắt buộc phải build-deploy lại app .</p>
+                        <p>Với sự ra đời của lambda expression, chúng ta có thể cải tiến bằng cách dùng Consumer&lt;T&gt;.</p>
+                        <div class="code_block">
+                        <pre>
+List&lt;Consumer&lt;Account&gt;&gt; transaction1 = Arrays.asList(
+    (account) -> addMoney(account, 100),
+    (account) -> addMoney(account, 500),
+    (account) -> subtractMoney(account, 200),
+    (account) -> sendOwnerNotification(account)
+);
+
+List&lt;Consumer&lt;Account&gt;&gt; transaction2 = ...
+
+static void doTransaction(Account account, List&lt;Consumer&lt;Account&gt;&gt; transaction) {
+    for (Consumer&lt;Account&gt; step : transaction) {
+        step.accept(account);
+    }
+}
+                        </pre>
+                        </div>
+                        <p>Nhờ lambda expression mà chúng ta có thể "đóng gói" những step của 1 transaction thành list và truyền vào ở dạng param. Code trở nên ngắn gọn và có thể tái sử dụng. Thậm chí có thể cho user thực hiện một transaction do chính họ quy định bằng cách gọi API (điều mà hardcode không làm được).</p>
+                    </div>
+                    <div>
+                        <h2>3. Sử dụng Map thay cho switch case </h2>  
+                            <p>Trong một số trường hợp, nếu các logic bên trong switch case có sự tương đồng và lặp lại, chúng ta có thể cân nhắc sử dụng Map.</p>
+                            <p>Xét ví dụ sau, có 3 lựa chọn thanh toán khi đăng kí membership ở 1 website.</p>
+                            <div class="code_block">
+                                <pre>
+enum Policy {
+    MONTHLY,
+    YEARLY,
+    LIFE_TIME
+}
+                                </pre>
+                            </div>
+                            <p>Mỗi lựa chọn có 1 mức giá khác nhau. Code xử lý thanh toán có thể viết đại loại như sau.</p>
+                            <div class="code_block">
+                                <pre>
+switch (policy) {
+    case MONTHLY:
+        doPayment(account, 17.5);
+        break;
+    case YEARLY:
+        doPayment(account, 180);
+        break;
+    case LIFE_TIME:
+        doPayment(account, 1000);
+        break;
+    default:
+        // do something
+}                                   
+                                </pre>
+                            </div>
+                            <p>Chúng ta refactor bằng cách sử dụng Map.</p>
+                            <div class="code_block">
+                                <pre>
+static Map&lt;Policy, Consumer&lt;Account&gt;&gt; options = new HashMap<>();
+static {
+    options.put(MONTHLY, acc -> doPayment(acc, 17.5));
+    options.put(YEARLY, acc -> doPayment(acc, 180));
+    options.put(LIFE_TIME, acc -> doPayment(acc, 1000));
+}
+
+void process() {
+    Consumer&lt;Account&gt; option = options.get(policy);
+    if (option != null) {
+        option.accept(account);
+    } else {
+        // default do something
+    }
+}                                 
+                                </pre>
+                            </div>
+                            <p>Dễ dàng nhận thấy, cũng như ví dụ 1 và 2, chúng ta cố gắng tách logic nghiệp vụ từ dạng code sang dạng constant và khiến phần code xử lý abstract nhất có thể.</p>
+                            <p>Bạn có thể nói rằng số lượng line of code không có nhiều sự khác biệt. Nhưng một trong những ưu điểm của việc sử dụng Map, là ta có thể kiểm tra đối tượng dạng object như Class<?>, trong khi switch bị giới hạn ở bốn kiểu data là số nguyên, kí tự, String và enum. (Hiện tại Java 17 đã hỗ trợ điều này với tính năng pattern matching dành cho switch)</p>
+                            <p>Xét ví dụ sau, khi ghi dữ liệu ra file Excel với thư viện Apache POI. Thông thường, chúng ta sẽ phải dùng if else bởi switch không hỗ trợ Class&lt;T&gt;.</p>
+                            <div class="code_block">
+                                <pre>
+Class&lt;?&gt; type = cellValue.getClass();
+
+if (type.equals(long.class) || type.equals(Long.class)) {
+    cell.setCellValue((long) cellValue);
+
+} else if (type.equals(double.class) || type.equals(Double.class)) {
+    cell.setCellValue((double) cellValue);
+
+} else if (type.equals(Date.class)) {
+    cell.setCellValue((Date) cellValue);
+    
+} else if ... 
+                                </pre>
+                            </div>
+                            <p>Sự trầm cảm khi maintain tỉ lệ thuận với số dòng if-else có trong code. Hãy cùng refactor lại bằng Map.</p>
+                            <div class="code_block">
+                                <pre>
+static Map&lt;Class&lt;?&gt;, BiConsumer&lt;Cell, Object&gt;&gt; handlers = new HashMap&lt;&gt;();
+static {
+    handlers.put(Long.class, (cell, val) -> cell.setCellValue((long) val));
+    handlers.put(long.class, (cell, val) -> cell.setCellValue((long) val));
+    handlers.put(Date.class, (cell, val) -> cell.setCellValue((Date) val));
+    handlers.put(Double.class, (cell, val) -> cell.setCellValue((double) val));
+    [...]
+}
+
+void process() {
+    BiConsumer&lt;Cell, Object&gt; handler = handlers.get(cellValue.getClass());
+    if (handler != null) {
+        handler.accept(cell, cellValue);
+    }
+}
+                                </pre>
+                            </div>
+                            <p>Mỗi lần muốn thêm một loại dữ liệu mới, chỉ cần sửa phần constant handlers, chứ không cần "đụng chạm" vào logic xử lý, giúp cho phần code này luôn sạch sẽ gọn gàng.</p>
+                    </div>
+                    <div>
+                      <h2>Nhận xét</h2>
+                            <p>3 kĩ thuật được nêu trên đều có một đặc điểm chung, đó là chúng ta luôn cố gắng tách dữ liệu nghiệp vụ từ dạng code ở phần body sang dạng constant (input param). Lợi ích lớn nhất của điều này là ngăn ngừa hardcode nghiệp vụ. Chúng ta có thể tách và lưu nghiệp vụ xuống DB, mỗi lần thay đổi chỉ cần cập nhật DB mà không cần compile/build lại app.</p>
+                            <p>Ngoài ra, code xử lý cũng ngắn gọn và sạch sẽ hơn.</p>
+                    </div>
+                    <div>
+                        <h2>4. Kết</h2>
+                            <p>Các kĩ thuật này hoàn toàn có thể áp dụng với những ngôn ngữ khác, chứ không duy nhất cho Java. Declarative programming là một chủ đề thú vị và vẫn còn nhiều thứ để nghiên cứu.</p>
+                            <h5>Mình sẽ không gọi là Functional Programming (FP), bởi Java vốn dĩ rất nặng về OOP và vẫn còn ở rất xa với tiêu chuẩn của FP. FP có nhiều pattern cao cấp (curry, recursion) mà đôi khi áp dụng không cẩn thận có thể khiến code trở nên khó maintain hơn thay vì OOP. Chỉ dừng ở cấp độ Declarative là đủ rồi.</h5>
+                            <p>Hẹn gặp lại các bạn trong những bài viết tiếp theo.</p>
+                    </div>
+                </div>
+              </article>
+            </div>
+    
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <div class="blog_sidebar">
+                  <div class="sidebar_widget">
+                    <h4>Recent Posts</h4>
+                    <ul class="recent_post_list">
+                      <li>
+                        <a href="#">
+                          <a href="designjs.html" class="post_title">6 Design Patterns thông dụng trong JavaScript cần biết </a>
+                          <div class="post_date">December 29, 2024</div>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+      
+                  <div class="sidebar_widget">
+                    <h4>Categories</h4>
+                    <ul class="category_list">
+                      <li><a href="#">Java<span>(6)</span></a></li>
+                      <li><a href="#">Programming <span>(8)</span></a></li>
+                      <li><a href="#">Web Development <span>(7)</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+            </div>
+      </section>
+    </body>
+      
+
+</html>

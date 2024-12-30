@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Basic -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Site Metas -->
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <style>
+            p {
+                text-indent: 30px; /* Thụt vào 30px */
+            }
+        </style>
+      
+        <title>Kiểu Dữ Liệu Trong Java - Nam</title>
+      
+        <!-- slider stylesheet -->
+        <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+      
+        <!-- font wesome stylesheet -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+      
+        <!-- bootstrap core css -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+      
+        <!-- fonts style -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="css/style.css" rel="stylesheet" />
+        <!-- responsive style -->
+        <link href="css/responsive.css" rel="stylesheet" />
+        <link href="css/blog-post.css" rel="stylesheet" />
+      </head>
+<body>
+    <div class="hero_area1">
+      <!-- header section strats -->
+      <header class="header_section">
+          <div class="container">
+            <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+              <!-- <a class="navbar-brand mr-5" href="index.html">
+                <img src="images/logo.png" alt="">
+                <span>
+                  Fregg
+                </span>
+              </a> -->
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                  <ul class="navbar-nav">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.html">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                  </ul>
+                  <form class="form-inline">
+                    <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+                  </form>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </header>
+        <!-- end header section -->
+  </div>
+
+  <!-- Blog post content -->
+  <section class="blog_post layout_padding">
+    <div class="container">
+      <div class="row">
+        <!-- Main content -->
+        <div class="col-lg-8">
+          <article class="blog_detail">
+            <!-- Post meta -->
+            <div class="post_meta">
+              <div class="meta_item">
+                <i class="fa fa-calendar"></i>
+                <span>March 20, 2024</span>
+              </div>
+              <div class="meta_item">
+                <i class="fa fa-folder"></i>
+                <span>Programming</span>
+              </div>
+              <div class="meta_item">
+                <i class="fa fa-user"></i>
+                <span>By Hồ Phước Nam</span>
+              </div>
+            </div>
+
+            <!-- Post title -->
+            <h1 class="post_title">Kiểu Dữ Liệu Trong Java</h1>
+
+            <!-- Post content -->
+            <div class="post_content">
+              <p class="intro">
+                Trong Java, kiểu dữ liệu đóng vai trò quan trọng trong việc xác định cách lưu trữ và xử lý dữ liệu. 
+                Bài viết này sẽ giúp bạn hiểu rõ về các kiểu dữ liệu cơ bản và cách sử dụng chúng một cách hiệu quả.
+              </p>
+
+              <div class="content_section">
+                <h2>1. Kiểu dữ liệu nguyên thủy (Primitive Data Types)</h2>
+                
+                <h3>Kiểu số nguyên</h3>
+                <div class="data_type_grid">
+                  <div class="type_card">
+                    <div class="type_header">byte</div>
+                    <div class="type_content">
+                      <div class="type_info">
+                        <p><strong>Kích thước:</strong> 8-bit</p>
+                        <p><strong>Giá trị:</strong> -128 đến 127</p>
+                      </div>
+                      <div class="code_block">
+                        <code>byte soNguyen = 100;</code>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="type_card">
+                    <div class="type_header">short</div>
+                    <div class="type_content">
+                      <div class="type_info">
+                        <p><strong>Kích thước:</strong> 16-bit</p>
+                        <p><strong>Giá trị:</strong> -32,768 đến 32,767</p>
+                      </div>
+                      <div class="code_block">
+                        <code>short soNgan = 1000;</code>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="type_card">
+                    <div class="type_header">int</div>
+                    <div class="type_content">
+                      <div class="type_info">
+                        <p><strong>Kích thước:</strong> 32-bit</p>
+                        <p><strong>Giá trị:</strong> -2<sup>31</sup> đến 2<sup>31</sup>-1</p>
+                      </div>
+                      <div class="code_block">
+                        <code>int soNguyen = 1000000;</code>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="type_card">
+                    <div class="type_header">long</div>
+                    <div class="type_content">
+                      <div class="type_info">
+                        <p><strong>Kích thước:</strong> 64-bit</p>
+                        <p><strong>Giá trị:</strong> -2<sup>63</sup> đến 2<sup>63</sup>-1</p>
+                      </div>
+                      <div class="code_block">
+                        <code>long soLon = 1234567890L;</code>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h3>Kiểu số thực</h3>
+              <div class="data_type_grid">
+                <div class="type_card">
+                  <div class="type_header">float</div>
+                  <div class="type_content">
+                    <div class="type_info">
+                      <p><strong>Kích thước:</strong> 32-bit</p>
+                      <p><strong>Độ chính xác:</strong> 6-7 chữ số thập phân</p>
+                    </div>
+                    <div class="code_block">
+                      <code>float soThuc = 3.14f;</code>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="type_card">
+                  <div class="type_header">double</div>
+                  <div class="type_content">
+                    <div class="type_info">
+                      <p><strong>Kích thước:</strong> 64-bit</p>
+                      <p><strong>Độ chính xác:</strong> 15 chữ số thập phân</p>
+                    </div>
+                    <div class="code_block">
+                      <code>double soThucChinhXac = 3.141592653589793;</code>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h3>Kiểu ký tự và logic</h3>
+              <div class="data_type_grid">
+                <div class="type_card">
+                  <div class="type_header">char</div>
+                  <div class="type_content">
+                    <div class="type_info">
+                      <p><strong>Kích thước:</strong> 16-bit</p>
+                      <p><strong>Giá trị:</strong> Unicode characters</p>
+                    </div>
+                    <div class="code_block">
+                      <code>char kyTu = 'A';</code>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="type_card">
+                  <div class="type_header">boolean</div>
+                  <div class="type_content">
+                    <div class="type_info">
+                      <p><strong>Kích thước:</strong> 1-bit</p>
+                      <p><strong>Giá trị:</strong> true hoặc false</p>
+                    </div>
+                    <div class="code_block">
+                      <code>boolean dung = true;</code>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h2>2. Ví dụ thực tế</h2>
+              <div class="example_section">
+                <div class="example_card">
+                  <h4>Quản lý thông tin sinh viên</h4>
+                  <div class="code_block">
+                    <pre>
+public class SinhVien {
+    private String hoTen;        // Chuỗi ký tự
+    private int tuoi;           // Số nguyên
+    private double diemTB;      // Số thực
+    private boolean daTotNghiep; // Logic
+    
+    public SinhVien(String hoTen, int tuoi) {
+        this.hoTen = hoTen;
+        this.tuoi = tuoi;
+        this.diemTB = 0.0;
+        this.daTotNghiep = false;
+    }
+}
+                    </pre>
+                  </div>
+                </div>
+              </div>
+
+              <h2>3. Lưu ý quan trọng</h2>
+              <div class="tips_section">
+                <ul>
+                  <li>Luôn chọn kiểu dữ liệu phù hợp với nhu cầu sử dụng</li>
+                  <li>Sử dụng int cho hầu hết các trường hợp số nguyên</li>
+                  <li>Dùng double cho các phép tính số thực cần độ chính xác cao</li>
+                  <li>Cẩn thận với việc chuyển đổi kiểu dữ liệu (type casting)</li>
+                  <li>Kiểu boolean chỉ dùng 1 bit nhưng thường được JVM tối ưu thành 1 byte</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+          <div class="blog_sidebar">
+            <div class="sidebar_widget">
+              <h4>Recent Posts</h4>
+              <ul class="recent_post_list">
+                <li>
+                  <a href="#">
+                    <a href="about-javascript.html" class="post_title">15 điều thú vị về JavaScript </a>
+                    <div class="post_date">December 28, 2024</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <a href="classdeclaration.html" class="post_title">Khai báo lớp trong Java Script </a>
+                    <div class="post_date">December 28, 2024</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="sidebar_widget">
+              <h4>Categories</h4>
+              <ul class="category_list">
+                <li><a href="#">Java <span>(5)</span></a></li>
+                <li><a href="#">Programming <span>(8)</span></a></li>
+                <li><a href="#">Web Development <span>(3)</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html> 
